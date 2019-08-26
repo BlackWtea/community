@@ -10,10 +10,13 @@ import java.io.IOException;
 
 @Component
 public class GithubProvider {
-
+    /**
+     * post to a server
+     * @param accesstokenDto
+     * @return
+     */
     public String getAccesstoken(AccesstokenDto accesstokenDto) {
        MediaType mediaType = MediaType.get("application/json; charset=utf-8");
-
        OkHttpClient client = new OkHttpClient();
        RequestBody body = RequestBody.create(mediaType, JSON.toJSONString(accesstokenDto));
        Request request = new Request.Builder().url("https://github.com/login/oauth/access_token").post(body).build();
@@ -43,6 +46,5 @@ public class GithubProvider {
        } catch (IOException e) {
        }
         return null;
-
    }
 }

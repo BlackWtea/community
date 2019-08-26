@@ -1,3 +1,4 @@
+
 package com.mashen.community;
 
 import org.springframework.boot.SpringApplication;

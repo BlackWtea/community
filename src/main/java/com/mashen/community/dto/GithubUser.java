@@ -1,5 +1,7 @@
 package com.mashen.community.dto;
 
+import com.mashen.community.model.User;
+
 public class GithubUser {
 
     private String name;
